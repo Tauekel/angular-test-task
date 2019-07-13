@@ -1,0 +1,34 @@
+<table class="table table-hover">
+  <thead>
+    <th>Person</th>
+    <th>Position</th>
+    <th>Phone</th>
+    <th></th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let emp of list | slice:startIndex:endIndex">
+    <td (click)="onEdit(emp)">{{emp.initials}} - {{emp.fullName}}</td>
+    <td (click)="onEdit(emp)">{{emp.position}}</td>
+    <td (click)="onEdit(emp)">{{emp.phone}}</td>
+    <td><a class="btn text-danger" (click)="onDelete(emp.id)"><i class="fa fa-trash"></i></a></td>
+  </tr>
+  </tbody>
+</table>
+<!--<nav aria-label="Page navigation example">-->
+<!--  <ul class="pagination">-->
+<!--    <li class="page-item">-->
+<!--      <a class="page-link" href="#" aria-label="Previous">-->
+<!--        <span aria-hidden="true">&laquo;</span>-->
+<!--      </a>-->
+<!--    </li>-->
+<!--    <li *ngFor="let i of getArrayFromNumber(list.length); let in = index" class="page-item">-->
+<!--      <a class="page-link" (click)="updateIndex(in)">{{in + 1}}</a>-->
+<!--    </li>-->
+
+<!--    <li class="page-item">-->
+<!--      <a class="page-link" href="#" aria-label="Next">-->
+<!--        <span aria-hidden="true">&raquo;</span>-->
+<!--      </a>-->
+<!--    </li>-->
+<!--  </ul>-->
+<!--</nav>-->
